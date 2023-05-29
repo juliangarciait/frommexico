@@ -60,7 +60,7 @@ class StockPicking1(models.Model):
     def default_get(self, fields):
          result = super(StockPicking1, self).default_get(fields)
          if len(result) > 0:
-            if result['picking_type_id'] == 1:
+            if result.get('picking_type_id', default = None) == 1:
                 group = self.env.ref('vendor_inventory.group_vendor')
                 if self.env.user.id in group.users.ids:
                     result.update({
