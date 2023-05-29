@@ -8,7 +8,7 @@
             <xpath expr="//button[@name='button_validate']" position="attributes">
                 <attribute name="attrs">{'invisible': [('is_vendor', '=', True)]}</attribute>
             </xpath>
-            <xpath expr="//field[@name='location_dest_id']" position="attributes">
+            <!-- <xpath expr="//field[@name='location_dest_id']" position="attributes">
                 <attribute name="attrs">{'invisible': [('is_vendor', '=', False)]}</attribute>
             </xpath>
             <xpath expr="//field[@name='owner_id']" position="attributes">
@@ -16,7 +16,7 @@
             </xpath>
             <xpath expr="//field[@name='partner_id']" position="attributes">
                 <attribute name="attrs">{'invisible': [('is_vendor', '=', False)]}</attribute>
-            </xpath>
+            </xpath> -->
             <xpath expr="//field[@name='owner_id']" position="before">
                 <field name="is_vendor" invisible="1"/> 
             </xpath>
